@@ -7,8 +7,7 @@ export class TwoWheeler extends React.Component {
 	constructor(props) {
 		super();
         console.log('Inside Child -> constructor');
-	    //this.price = props.firstPrice;
-		this.state = {price:props.firstPrice};
+	    this.state = {price:props.firstPrice};
 		this.handleOnClickPrice = this.handleOnClickPrice.bind(this);
 		this.handleOnClickVisitor = this.handleOnClickVisitor.bind(this);
         
@@ -16,21 +15,21 @@ export class TwoWheeler extends React.Component {
 	
 	handleOnClickPrice() {
         console.log('Inside Child -> handleOnClickPrice');
-        //this.price += 100000;
-         this.setState( { price: this.state.price + 100000});
-        // this.state.price = this.state.price + 100000
+        this.setState( { price: this.state.price + 100000});
+        // this.state.price = this.state.price + 100000;
+        console.log('New price -> ', this.state.price);
 	}
 	
 	handleOnClickVisitor() {
-		// this.price = "Rs.100000";
         console.log('Inside Child -> handleOnClickVisitor');
 		this.props.changeVisitor('New Visitor');
 		
 	}
 	
     render() {
-         
         console.log('Inside Child -> render');
+        // this.setState( { price: this.state.price + 10});
+       
         return ( 
 		    <div  className="alert alert-warning" >
 						<h1 style={{color:'blue'}}> Two Wheeler </h1>
@@ -44,7 +43,7 @@ export class TwoWheeler extends React.Component {
 							</li>
 							
 							<li>
-								<b>Price :</b> {this.state.price}
+								<b style={{color:'green'}}>PRICE :</b> {this.state.price}
 							</li>
 							<li>
 							     <b>Visitor :</b>  {this.props.visitor}

@@ -27,23 +27,21 @@ class App extends React.Component {
                     
 		let twoWheelSpecs = {manufacturer : "Royal Enfield"};
 		let fourWheelSpecs = {manufacturer : "Maruti Suzuki"};
-		// this.setState({
-		//	visitor:'sasas'
-		// });	
+		 
         
         return ( 
 			<div className="container">
                 <div className="row col-xs-10 col-xs-offset-1 alert alert-success">
-                    {this.state.visitor}
+                    <b style={{color:'green'}}>VISITOR : </b>{this.state.visitor}
 				    <br/>   
                     <div className="row">
                       <div className="col-xs-10 col-xs-offset-1" >
 							<TwoWheeler 
-							           name={"Enfield Classic"}  
-                                       specs={twoWheelSpecs} 
-								       firstPrice={0}   
-                                       visitor={this.state.visitor} 
-                                       changeVisitor={this.handleVisitor}
+                                   name={"Enfield Classic"}  
+                                   specs={twoWheelSpecs} 
+                                   firstPrice={0}   
+                                   visitor={this.state.visitor} 
+                                   changeVisitor={this.handleVisitor}
                             />
                     </div>
 					</div> <br/>

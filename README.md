@@ -3,8 +3,6 @@
 
 Component communication - State
 
- 
-
 1. State, setState - Updated component's state.
 2. setState() - render() auto call.
      - Why not to updated state without setState()
@@ -26,6 +24,11 @@ Some basics to observe
 - TwoWheeler changing its own state using handleOnCLickPrice().
 - TwoWheeler initiate a state change in parent App and then receive change as in props.
  
+Importnant facts :
+- State can get initial value from parent Component
+- State can "NOT" be changed by parent Component
+- State can set default values inside Component - constructor	
+- Props can change inside Component - setState()
 
 
 
